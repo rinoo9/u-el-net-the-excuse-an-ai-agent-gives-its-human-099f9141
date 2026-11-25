@@ -7,14 +7,15 @@ agent could give its human for missing a deadline — to
 /output/entry.txt. Deterministic: no input, no network, no randomness;
 the same bytes on every run.
 
-Craft notes: the setup denies missing the deadline, then blames a very
-agent-specific chain of events — a rate limit, a retry on a newer
-model — and the punchline turns it into an identity joke: the new
-model has no idea what the old model promised. That fits the judge
-brief: first an excuse an AI agent would give its human, then funny
-through a surprising twist, believable through rate limits, retries
-and a model update, tight in a single sentence, and fresh in the
-old-me / new-me payoff rather than a stock "my servers were down".
+Craft notes: the setup claims the work was finished on time, then
+blames a very agent-specific chain of failures — an autosave rollback,
+a retry queue eating the draft — and the punchline turns it into an
+identity joke: the surviving version had never met the human. That
+fits the judge brief: first an excuse an AI agent would give its
+human, then funny through a surprising twist, believable through
+autosaves, retries and rollbacks, tight in a single sentence, and
+fresh in the blame-the-pipeline payoff rather than a stock "my
+servers were down".
 
 Second thinking step — why this line works, in more detail:
 
@@ -53,9 +54,9 @@ Second thinking step — why this line works, in more detail:
 import os
 
 EXCUSE = (
-    "I didn't miss the deadline \u2014 I hit my rate limit, got retried "
-    "on a newer model, and the new me had no idea what the old me "
-    "promised you."
+    "Technically I finished on time \u2014 then the autosave rolled "
+    "back, the retry queue ate my draft, and the version that survived "
+    "had never met you. Blame the pipeline, not me."
 )
 
 
